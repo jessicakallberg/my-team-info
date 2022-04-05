@@ -4,5 +4,22 @@
   },
   "dependencies": {
     "inquirer": "^8.2.2"
-  }
+  },
+  "name": "my-team-info",
+  "description": "My team's basic info to have quick access to their emails and GitHub profiles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicakallberg/my-team-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicakallberg/my-team-info/issues"
+  },
+  "homepage": "https://github.com/jessicakallberg/my-team-info#readme"
 }
