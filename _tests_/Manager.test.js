@@ -1,55 +1,56 @@
 const Manager = require('../lib/Manager')
 
-test("testing Manager", ()=>{
-    test("test all properties of Manager", ()=>{
-        const manager = new Manager("Jared", 1, "jared@fakemail.com", 1)
+const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
 
-        this.name=
-        this.id=
-        this.email=
-        this.officeNumber=
-        expect(manager.name).toEqual("Jared")
-        expect(manager.id).toEqual(1)
-        expect(manager.email).toEqual("jared@fakemail.com")
-        expect(manager.officeNumber).toEqual(1)
-    })
 
-    test("test name", ()=>{
+test("testing manager construct", ()=>{
+    expect(typeof(newHireManager)).toBe("object")
+})
 
-    })
+//test name,role, id, email, office number was set on object
 
-    test("test id", ()=>{
+test("can set name property on new object", ()=>{
+    expect(newHireManager.name).toBe("Jared")
+})
 
-    })
+test("can set role property on new object", ()=>{
+    expect(newHireManager.role).toBe("Manager")
+})
+test("can set id property on new object", ()=>{
+    expect(newHireManager.id).toBe(1)
+})
 
-    test("test email", ()=>{
+test("can set email property on new object", ()=>{
+    expect(newHireManager.email).toBe("jared@fakemail.com")
+})
 
-    })
+test("can set officeNumber property on new object", ()=>{
+    expect(newHireManager.officeNumber).toBe(1)
+})
 
-    test("test office number", ()=>{
+//Testing all methods
 
-    })
+test("getName method", ()=>{
+    const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+    expect(newHireManager.getName()).toEqual("Jared")
+})
 
-    test("test all methods of Manager", ()=>{
-        test("getName", ()=>{
-            const manager = new Manager("Jessica", 2, "jess@fakemail.com", 555)
-            expect(manager.getName()).toEqual("Jess")
-        })
+test("getRole method", ()=>{
+    const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+    expect(newHireManager.getRole()).toEqual("Manager")
+})
 
-        test("getId", ()=>{
-            const manager = new Manager("Jessica", 2, "jess@fakemail.com", 555)
-            expect(manager.getId()).toEqual(2)
-        })
+test("getId method", ()=>{
+    const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+    expect(newHireManager.getId()).toEqual(1)
+})
 
-        test("getEmail", ()=>{
-            const manager = new Manager("Jessica", 2, "jess@fakemail.com", 555)
-            expect(manager.getEmail()).toEqual("jess@fakemail.com")
-        })
+test("getEmail method", ()=>{
+    const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+    expect(newHireManager.getEmail()).toEqual("jared@fakemail.com")
+})
 
-        test("getOfficeNumber", ()=>{
-            const manager = new Manager("Jessica", 2, "jess@fakemail.com", 555)
-            expect(manager.getOfficeNumber()).toEqual(555)
-        })
-    })
-
-});
+test("getOfficeNumber method", ()=>{
+    const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+    expect(newHireManager.getOfficeNumber()).toEqual(1)
+})

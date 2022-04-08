@@ -1,32 +1,48 @@
 const Employee = require('../lib/Employee')
 
-const newHire = new Employee("Jessica", 555, "jessfakemail.com")
+const newHireEmployee = new Employee("Jessica", "Employee", 555, "jessfakemail.com")
 
-// hired = {
-//     name: "Jessica",
-//     id: 555,
-//     email: "jessfakemail.com"
-// }
 
-test("can construct employee object", ()=>{
-    expect(typeof(newHire)).toBe("object")
-
+test("testing employee construct", ()=>{
+    expect(typeof(newHireEmployee)).toBe("object")
 })
 
-//test name, empl number, email was set on to the object
+//test name, id, email was set on object
 
-test("can set the name property on a new object", ()=>{
-    expect(newHire.name).toBe("Jessica")
+test("can set name property on new object", ()=>{
+    expect(newHireEmployee.name).toBe("Jessica")
 })
 
-test("can set the id property on object", ()=>{
-    expect(newHire.id).toBe(555)
+test("can set role property on new object", ()=>{
+    expect(newHireEmployee.role).toBe("Employee")
+})
+
+test("can set the id property on new object", ()=>{
+    expect(newHireEmployee.id).toBe(555)
 })
 
 test("can set the email property on object", ()=>{
-    expect(newHire.email).toBe("jessfakemail.com")
+    expect(newHireEmployee.email).toBe("jessfakemail.com")
 })
 
+//Testing all methods
+
 test("getName method", ()=>{
-    expect(newHire.getName()).toBe("Jessica")
+    const newHireEmployee = new Employee("Jessica", "Employee", 555, "jessfakemail.com")
+    expect(newHireEmployee.getName()).toEqual("Jessica")
+})
+
+test("getRole method", ()=>{
+    const newHireEmployee = new Employee("Jessica", "Employee", 555, "jessfakemail.com")
+    expect(newHireEmployee.getRole()).toEqual("Employee")
+})
+
+test("getId method", ()=>{
+    const newHireEmployee = new Employee("Jessica", "Employee", 555, "jessfakemail.com")
+    expect(newHireEmployee.getId()).toEqual(555)
+})
+
+test("getEmail method", ()=>{
+    const newHireEmployee = new Employee("Jessica", "Employee", 555, "jessfakemail.com")
+    expect(newHireEmployee.getEmail()).toEqual("jessfakemail.com")
 })
