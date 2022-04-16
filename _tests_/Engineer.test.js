@@ -3,49 +3,44 @@ const Engineer = require('../lib/Engineer')
 const newHireEngineer = new Engineer ("Alec", "Engineer", 2, "alec@fakemail.com", "ibealec")
 
 
-test("testing Engineer construct", ()=>{
-    expect(typeof(newHireEngineer)).toBe("object")
-})
+describe("Engineer", ()=>{
+    test("test name", ()=>{
+        expect(newHireEngineer.getName()).toBe("Jared")
+    })
 
-//test name,role, id, email, gitHub was set on object
+    test("test role", ()=>{
+        expect(newHireEngineer.getRole()).toBe("Engineer")
+    })
+    test("test id", ()=>{
+        expect(newHireEngineer.getId()).toBe(2)
+    })
 
-test("can set name property on new object", ()=>{
-    expect(newHireEngineer.name).toBe("Jared")
-})
+    test("test email", ()=>{
+        expect(newHireEngineer.getEmail()).toBe("alec@fakemail.com")
+    })
 
-test("can set role property on new object", ()=>{
-    expect(newHireEngineer.role).toBe("Engineer")
+    test("test github", ()=>{
+        expect(newHireEngineer.getGitHub()).toBe("ibealec")
+    })
 })
-test("can set id property on new object", ()=>{
-    expect(newHireEngineer.id).toBe(2)
-})
+// //Testing all methods
 
-test("can set email property on new object", ()=>{
-    expect(newHireEngineer.email).toBe("alec@fakemail.com")
-})
+// test("getName method", ()=>{
+//     expect(newHireEngineer.getName()).toBe("Jared")
+// })
 
-test("can set gitHub property on new object", ()=>{
-    expect(newHireEngineer.gitHub).toBe("ibealec")
-})
+// test("getRole method", ()=>{
+//     expect(newHireEngineer.getRole()).toBe("Engineer")
+// })
 
-//Testing all methods
+// test("getId method", ()=>{
+//     expect(newHireEngineer.getId()).toBe(2)
+// })
 
-test("getName method", ()=>{
-    expect(newHireEngineer.getName()).toBe("Jared")
-})
+// test("getEmail method", ()=>{
+//     expect(newHireEngineer.getEmail()).toBe("alec@fakemail.com")
+// })
 
-test("getRole method", ()=>{
-    expect(newHireEngineer.getRole()).toBe("Engineer")
-})
-
-test("getId method", ()=>{
-    expect(newHireEngineer.getId()).toBe(2)
-})
-
-test("getEmail method", ()=>{
-    expect(newHireEngineer.getEmail()).toBe("alec@fakemail.com")
-})
-
-test("getOfficeNumber method", ()=>{
-    expect(newHireEngineer.gitHub()).toBe("ibealec")
-})
+// test("getOfficeNumber method", ()=>{
+//     expect(newHireEngineer.gitHub()).toBe("ibealec")
+// })
