@@ -1,46 +1,35 @@
 const Engineer = require('../lib/Engineer')
 
-const newHireEngineer = new Engineer ("Alec", "Engineer", 2, "alec@fakemail.com", "ibealec")
+//const newHireEngineer = new Engineer ("Alec", "Engineer", 2, "alec@fakemail.com", "ibealec@github.com")
 
 
-describe("Engineer", ()=>{
-    test("test name", ()=>{
-        expect(newHireEngineer.getName()).toBe("Jared")
+test("test name", ()=>{
+    const myValue = "Alec"
+    const en = new Engineer(myValue)
+    expect(en.getName()).toBe(myValue)
     })
 
     test("test role", ()=>{
-        expect(newHireEngineer.getRole()).toBe("Engineer")
-    })
-    test("test id", ()=>{
-        expect(newHireEngineer.getId()).toBe(2)
-    })
+        const myValue = "Engineer"
+        const en = new Engineer(myValue)
+        expect(en.getRole()).toBe(myValue)
+        })
 
-    test("test email", ()=>{
-        expect(newHireEngineer.getEmail()).toBe("alec@fakemail.com")
-    })
+        test("test id", ()=>{
+            const myValue = 2
+            const en = new Engineer(myValue)
+            expect(en.getId()).toBe(myValue)
+            })
 
-    test("test github", ()=>{
-        expect(newHireEngineer.getGitHub()).toBe("ibealec")
-    })
-})
-// //Testing all methods
+            test("test email", ()=>{
+                const myValue = "alec@fakemail.com"
+                const en = new Engineer(myValue)
+                expect(en.getEmail()).toBe(myValue)
+                })
 
-// test("getName method", ()=>{
-//     expect(newHireEngineer.getName()).toBe("Jared")
-// })
+                test("test github", ()=>{
+                    const myValue = "ibealec@github.com"
+                    const en = new Engineer(myValue)
+                    expect(en.getGitHub()).toBe(myValue)
+                    });
 
-// test("getRole method", ()=>{
-//     expect(newHireEngineer.getRole()).toBe("Engineer")
-// })
-
-// test("getId method", ()=>{
-//     expect(newHireEngineer.getId()).toBe(2)
-// })
-
-// test("getEmail method", ()=>{
-//     expect(newHireEngineer.getEmail()).toBe("alec@fakemail.com")
-// })
-
-// test("getOfficeNumber method", ()=>{
-//     expect(newHireEngineer.gitHub()).toBe("ibealec")
-// })

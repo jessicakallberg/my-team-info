@@ -1,26 +1,34 @@
 const Intern = require('../lib/Intern')
 
-const newHireIntern = new Intern ("John", "Intern", 5, "john@fakemail.com", "2University")
+//const newHireIntern = new Intern ("John", "Intern", 5, "john@fakemail.com", "2University")
 
 
-describe("Intern", ()=>{
-    test("test name", ()=>{
-        expect(newHireIntern.getName()).toBe("John")
+test("test name", ()=>{
+    const myValue = "John"
+    const int = new Intern(myValue)
+    expect(int.getName()).toBe(myValue)
     })
 
     test("test role", ()=>{
-        expect(newHireIntern.getRole()).toBe("Intern")
-    })
-    test("test id", ()=>{
-        expect(newHireIntern.getId()).toBe(5)
-    })
+        const myValue = "Intern"
+        const int = new Intern(myValue)
+        expect(int.getRole()).toBe(myValue)
+        })
 
-    test("test email", ()=>{
-        expect(newHireIntern.getEmail()).toBe("john@fakemail.com")
-    })
+        test("test id", ()=>{
+            const myValue = 5
+            const int = new Intern(myValue)
+            expect(int.getId()).toBe(myValue)
+            })
 
-    test("test school", ()=>{
-        expect(newHireIntern.getSchool()).toBe("2University")
-    })
+            test("test email", ()=>{
+                const myValue = "john@fakemail.com"
+                const int = new Intern(myValue)
+                expect(int.getEmail()).toBe(myValue)
+                })
 
-})
+                test("test school", ()=>{
+                    const myValue = "2University"
+                    const int = new Intern(myValue)
+                    expect(int.getSchool()).toBe(myValue)
+                    });

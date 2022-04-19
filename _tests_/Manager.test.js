@@ -1,29 +1,34 @@
 const Manager = require('../lib/Manager')
 
-const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
+//const newHireManager = new Manager("Jared", "Manager", 1, "jared@fakemail.com", 1)
 
 
-describe("Manger", ()=>{
-    test("Test for name", ()=>{
-        expect(newHireManager.getName()).toBe("Jared")
+test("test name", ()=>{
+    const myValue = "Jared"
+    const mgr = new Manager(myValue)
+    expect(mgr.getName()).toBe(myValue)
     })
 
-    test("Test for role", ()=>{
-        expect(newHireManager.getRole()).toBe("Manager")
-    })
-    test("Test for id ", ()=>{
-        expect(newHireManager.getId()).toBe(1)
-    })
+    test("test role", ()=>{
+        const myValue = "Manager"
+        const mgr = new Manager(myValue)
+        expect(mgr.getRole()).toBe(myValue)
+        })
 
-    test("Test for email", ()=>{
-        expect(newHireManager.getEmail()).toBe("jared@fakemail.com")
-    })
+        test("test id", ()=>{
+            const myValue = 1
+            const mgr = new Manager(myValue)
+            expect(mgr.getId()).toBe(myValue)
+            })
 
-    test("Test for office number", ()=>{
-        expect(newHireManager.getOfficeNumber()).toBe(1)
-    })
-})
+            test("test email", ()=>{
+                const myValue = "jared@fakemail.com"
+                const mgr = new Manager(myValue)
+                expect(mgr.getEmail()).toBe(myValue)
+                })
 
-
-
-
+                test("test officeNumber", ()=>{
+                    const myValue = 1
+                    const mgr = new Manager(myValue)
+                    expect(mgr.getOfficeNumber()).toBe(myValue)
+                    });
