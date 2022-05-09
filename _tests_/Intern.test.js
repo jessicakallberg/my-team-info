@@ -1,34 +1,27 @@
 const Intern = require('../lib/Intern')
 
-//const newHireIntern = new Intern ("John", "Intern", 5, "john@fakemail.com", "2University")
+//const newHireIntern = new Intern ("John", 5, "john@fakemail.com", "2University")
 
 
-test("test name", ()=>{
-    const myValue = "John"
-    const int = new Intern(myValue)
-    expect(int.getName()).toBe(myValue)
-    })
-
-    test("test role", ()=>{
-        const myValue = "Intern"
-        const int = new Intern(myValue)
-        expect(int.getRole()).toBe(myValue)
-        })
-
-        test("test id", ()=>{
-            const myValue = 5
-            const int = new Intern(myValue)
-            expect(int.getId()).toBe(myValue)
-            })
-
-            test("test email", ()=>{
-                const myValue = "john@fakemail.com"
-                const int = new Intern(myValue)
-                expect(int.getEmail()).toBe(myValue)
-                })
-
-                test("test school", ()=>{
-                    const myValue = "2University"
-                    const int = new Intern(myValue)
-                    expect(int.getSchool()).toBe(myValue)
-                    });
+describe("Intern", () => {
+    test("Test for name", () => {
+      let newHireIntern = new Intern("John", 5, "john@fakemail.com", "2University");
+      expect(newHireIntern.getName()).toBe("John");
+    });
+    test("Test for Id", () => {
+      let newHireIntern = new Intern("John", 5, "john@fakemail.com", "2University");
+      expect(newHireIntern.getId()).toBe(5);
+    });
+    test("Test for Email", () => {
+      let newHireIntern = new Intern("John", 5, "john@fakemail.com", "2University");
+      expect(newHireIntern.getEmail()).toBe("john@fakemail.com");
+    });
+    test("Test for school", () => {
+      let newHireIntern = new Intern("John", 5, "john@fakemail.com", "2University");
+      expect(newHireIntern.getSchool()).toBe("2University");
+    });
+    test("Test for getRole", () => {
+      let newHireIntern = new Intern("Jack", 4, "jack@Jack.com", "Perdue");
+      expect(newHireIntern.getRole()).toBe("Intern");
+    });
+  });

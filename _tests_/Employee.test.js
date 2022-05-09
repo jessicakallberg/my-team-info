@@ -1,28 +1,21 @@
-const Employee = require('../lib/Employee')
-
-//const newHireEmployee = new Employee("Employee","Jessica", 555, "jessica@fakemail.com")
+const Employee = require('../lib/Employee');
 
 
-test("test role", ()=>{
-    const myValue = "Employee"
-    const e = new Employee(myValue)
-    expect(e.getRole()).toBe(myValue);
-    }),
-
-    test("test name", ()=>{
-        const myValue = "Jessica"
-        const e = new Employee(myValue)
-        expect(e.getName()).toBe(myValue);
-        }),
-
-        test("test id", ()=>{
-            const myValue = 555
-            const e = new Employee(myValue)
-            expect(e.getId()).toBe(myValue)
-        }),
-
-            test("test email", ()=>{
-                const myValue = "jessica@fakemail.com"
-                const e = new Employee(myValue)
-                expect(e.getEmail()).toBe(myValue)
-            });
+describe("Employee", () => {
+    test("Test for name", () => {
+      let newHireEmployee = new Employee("Jessica", 555 , "jessica@fakemail.com");
+      expect(newHireEmployee.getName()).toBe("Jessica");
+    });
+    test("Test for Id", () => {
+      let newHireEmployee = new Employee("Jessica", 555 , "jessica@fakemail.com");
+      expect(newHireEmployee.getId()).toEqual(555);
+    });
+    test("Test for Email", () => {
+      let newHireEmployee = new Employee("Jessica", 555, "jessica@fakemail.com");
+      expect(newHireEmployee.getEmail()).toBe("jessica@fakemail.com");
+    });
+    test("Test for getRole", () => {
+      let newHireEmployee = new Employee("Jessica", 555, "jessica@fakemail.com");
+      expect(newHireEmployee.getRole()).toBe("Employee");
+    });
+  });
