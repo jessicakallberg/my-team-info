@@ -1,3 +1,6 @@
+
+
+
 function generateCard(answer) {
     var p = "";
     if (answer.getRole() === "Manager") {
