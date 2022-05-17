@@ -19,7 +19,7 @@ function generateCard(answer) {
   <div class="card shadow p-2 mb-5 bg-light pt-0 px-0"     style="width: 16rem;">
   <div class="card-body bg-primary ">
       <h5 class="card-title text-white">${answer.name}</h5>
-      <p class="card-text fs-2 text  text-white">${answer.getRole}
+      <p class="card-text fs-2 text  text-white">${answer.getRole()}
           <i class="fa-solid fa-mug-hot"></i>
       </p>
   </div>
