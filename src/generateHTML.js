@@ -1,18 +1,15 @@
 function generateCard(answer) {
   var p = "";
   if (answer.getRole() === "Manager") {
-    p = ` <p class="card-text fs-2 text  text-white">Manager
-    <i class="fa-solid fa-mug-hot"></i>
-  </p>
+    p = ` Office Number: ${answer.officeNumber}
+      
       `;
   } else if (answer.getRole() === "Engineer") {
-    p = `     <<li class="list-group-item">Github:
-    <a href="https://github.com/${answer.gitHub}" class="card-link">${answer.gitHub}</a>
-</li>
+    p = ` Github: <a href="https://github.com/${answer.gitHub}" class="card-link">${answer.gitHub}</a>
       `;
   } else {
-    p = `   <li class="list-group-item">School:${answer.school}
-    </li>
+    p = ` School:${answer.school}
+    
       `;
   }
   return `
@@ -28,8 +25,7 @@ function generateCard(answer) {
       <li class="list-group-item" >Email: 
           <a href="mailto:${answer.email}" class="card-link">${answer.email}</a>
       </li>
-      <li class="list-group-item">Office Number:${answer.officeNumber}
-      </li>
+      <li class="list-group-item">${p}</li>
     </ul>
     <div class="card-body">
     </div>
